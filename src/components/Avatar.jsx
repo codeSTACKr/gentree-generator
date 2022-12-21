@@ -44,7 +44,7 @@ const Avatar = ({
       {isImage ? (
         <img
           className={classNames(
-            "inline-block min-w-fit",
+            "inline-block aspect-square",
             height,
             width,
             rounding
@@ -57,7 +57,7 @@ const Avatar = ({
           className={classNames(
             height,
             width,
-            "inline-block min-w-fit overflow-hidden bg-gray-100",
+            "inline-block aspect-square overflow-hidden bg-gray-100",
             rounding
           )}
         >
