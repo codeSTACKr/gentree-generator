@@ -397,7 +397,7 @@ const Form = ({
         </div>
       </div>
 
-      <div className="py-5">
+      <div className="border-none pb-20 pt-5">
         <div className="flex justify-end">
           <button
             type="button"
