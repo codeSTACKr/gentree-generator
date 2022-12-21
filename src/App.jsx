@@ -12,7 +12,7 @@ function classNames(...classes) {
 
 function App() {
   const [isLight, setIsLight] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const [userName, setUserName] = useState("First Last");
   const [userHandle, setUserHandle] = useState("myHandle");
@@ -134,7 +134,7 @@ function App() {
         </button>
       </div>
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={setOpen}>
+        <Dialog as="div" className="relative" onClose={setOpen}>
           <div className="fixed inset-0" />
 
           <div className="fixed inset-0 overflow-hidden">
