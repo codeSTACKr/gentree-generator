@@ -641,7 +641,7 @@ function Render({
   return (
     <div
       className={classNames(
-        "min-w-screen relative h-full min-h-screen",
+        "min-w-screen relative h-full min-h-screen overflow-y-auto",
         lightBG,
         lightFG,
         darkBG,
