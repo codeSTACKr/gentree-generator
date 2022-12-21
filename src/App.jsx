@@ -4,7 +4,7 @@ import Toggle from "./components/Toggle";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import Render from "./Render";
-import { IconChevronLeft, IconChevronRight, IconHeart } from "@tabler/icons";
+import { IconMenu2, IconChevronRight, IconHeart, IconX } from "@tabler/icons";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -122,15 +122,15 @@ function App() {
           }}
         />
       </aside>
-      <div className="place-content absolute top-[50%] right-0 -ml-8 grid rounded-l-md border-t border-l border-b border-slate-500 bg-slate-200 py-4 px-2 dark:bg-slate-900 sm:-ml-10 lg:hidden">
+      <div className="place-content absolute top-4 left-4 grid py-4 px-2 lg:hidden">
         <button
           type="button"
-          className="rounded-l-md text-slate-500 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-600"
+          className="rounded-md text-slate-500 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-600"
           onClick={() => setOpen(true)}
         >
           <span className="sr-only">Close panel</span>
 
-          <IconChevronLeft className="h-6 w-6" aria-hidden="true" />
+          <IconMenu2 className="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
       <Transition.Root show={open} as={Fragment}>
@@ -150,18 +150,15 @@ function App() {
                   leaveTo="translate-x-full"
                 >
                   <Dialog.Panel className="pointer-events-auto relative block w-screen max-w-xl border-l border-slate-200 lg:hidden">
-                    <div className="place-content absolute top-[50%] left-0 -ml-8 flex grid rounded-l-md border border-slate-500 bg-slate-200 py-4 px-2 dark:bg-slate-900 sm:-ml-10">
+                    <div className="place-content absolute top-1 left-2 z-10 grid rounded-md py-4 px-2">
                       <button
                         type="button"
-                        className="rounded-l-md text-slate-500 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-600"
+                        className="rounded-md text-slate-500 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:focus:ring-slate-600"
                         onClick={() => setOpen(false)}
                       >
                         <span className="sr-only">Close panel</span>
 
-                        <IconChevronRight
-                          className="h-6 w-6"
-                          aria-hidden="true"
-                        />
+                        <IconX className="h-6 w-6" aria-hidden="true" />
                       </button>
                     </div>
                     <Render
@@ -189,7 +186,7 @@ function App() {
           </div>
         </Dialog>
       </Transition.Root>
-      <div className="absolute bottom-8 left-8 flex flex-col items-center justify-center">
+      <div className="absolute bottom-8 left-2 flex flex-col items-center justify-center sm:left-8">
         <svg
           viewBox="0 0 3180 1771"
           fill="none"
