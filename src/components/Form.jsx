@@ -397,14 +397,40 @@ const Form = ({
         </div>
       </div>
 
-      <div className="border-none pb-20 pt-5">
-        <div className="flex justify-end">
+      <div className="border-none pb-48 pt-5">
+        <div className="flex flex-col justify-end gap-3 sm:flex-row">
+          <a
+            href="https://github.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid"
+          >
+            <button
+              type="button"
+              className="inline-flex justify-center rounded-md border border-transparent bg-slate-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+            >
+              1. Sign up for GitHub
+            </button>
+          </a>
+          <a
+            href="https://app.netlify.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grid"
+          >
+            <button
+              type="button"
+              className="inline-flex justify-center rounded-md border border-transparent bg-slate-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+            >
+              2. Sign up for Netlify
+            </button>
+          </a>
           <button
             type="button"
-            className="ml-3 inline-flex justify-center rounded-md border border-transparent bg-slate-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+            className="inline-flex justify-center rounded-md border border-transparent bg-slate-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
             onClick={handleDeploy}
           >
-            Deploy to Netlify
+            3. Deploy to Netlify
           </button>
         </div>
       </div>
