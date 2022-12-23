@@ -6,4 +6,4 @@ Free link-in-bio generator that uses the Deploy to Netlify button.
 
 ## Video Walkthrough
 
-TODO: Add video link
+[![YOUTUBE VIDEO](https://img.youtube.com/vi/bR2tbXuzjcM/0.jpg)](https://www.youtube.com/watch?v=bR2tbXuzjcM)
