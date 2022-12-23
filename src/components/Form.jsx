@@ -397,7 +397,7 @@ const Form = ({
         </div>
       </div>
 
-      <div className="border-none pb-48 pt-5">
+      <div className="border-none pb-12 pt-5">
         <div className="flex flex-col justify-end gap-3 sm:flex-row">
           <a
             href="https://github.com/signup"
