@@ -115,6 +115,30 @@ const Header = () => {
           </div>
           <div className="ml-10 flex space-x-4">
             <a
+              href="https://www.producthunt.com/posts/gentr-ee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gentr&#0045;ee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline dark:hidden"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372344&theme=light"
+                alt="genTr&#0046;ee - Free&#0032;Link&#0045;in&#0045;Bio&#0032;Generator&#0032;that&#0032;even&#0032;works&#0032;on&#0032;Twitter&#0033; | Product Hunt"
+                className="inline-flex items-center justify-center"
+              />
+            </a>
+            <a
+              href="https://www.producthunt.com/posts/gentr-ee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gentr&#0045;ee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden rounded-md border border-orange-600 dark:inline "
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372344&theme=dark"
+                alt="genTr&#0046;ee - Free&#0032;Link&#0045;in&#0045;Bio&#0032;Generator&#0032;that&#0032;even&#0032;works&#0032;on&#0032;Twitter&#0033; | Product Hunt"
+                className="inline-flex items-center justify-center"
+              />
+            </a>
+            <a
               href="https://github.com/sponsors/codeSTACKr"
               target="_blank"
               rel="noopener noreferrer"
