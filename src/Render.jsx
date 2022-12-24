@@ -4,6 +4,7 @@ import Avatar from "./components/Avatar";
 // import Toggle from "./components/Toggle";
 import LargeLink from "./components/LargeLink";
 import SmallLink from "./components/SmallLink";
+import { validateHttp } from "./helpers/helpers";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -670,7 +671,7 @@ function Render({
       <div className="relative mx-auto flex max-w-7xl flex-col items-center p-4 sm:px-6 lg:px-8">
         <header className="flex flex-col items-center py-4">
           <Avatar
-            profilePic={`https://${profilePic}`}
+            profilePic={validateHttp(profilePic)}
             name={name}
             rounding={rounding}
           />

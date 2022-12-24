@@ -10,6 +10,7 @@ import {
 import { colors } from "../helpers/colors";
 import LinkForm from "./LinkForm";
 import Avatar from "./Avatar";
+import { validateHttp } from "../helpers/helpers";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -22,7 +23,7 @@ function convertLink(type, size) {
 function convertListOfLinks(list) {
   let linkString = "";
   list.forEach((l) => {
-    linkString += `&${convertLink(l.name, l.linkSize)}=https://${l.url}`;
+    linkString += `&${convertLink(l.name, l.linkSize)}=${validateHttp(l.url)}`;
   });
   return linkString;
 }
@@ -70,7 +71,7 @@ const Form = ({
       `VITE_NAME=${encodeURIComponent(userName.replace(/ /g, "_"))}` +
       `&VITE_HANDLE=@${encodeURIComponent(userHandle.replace(/ /g, "_"))}` +
       `&VITE_TITLE=${encodeURIComponent(userTitle.replace(/ /g, "_"))}` +
-      `&VITE_PROFILE_PIC=https://${userAvatar}` +
+      `&VITE_PROFILE_PIC=${validateHttp(userAvatar)}` +
       `&VITE_COLOR=${colorSelected.name}` +
       `&VITE_ROUNDSTYLE=${userBorderStyle.toLowerCase()}` +
       `&VITE_SMALL_LINKS_ORDER=${linkList
@@ -180,7 +181,7 @@ const Form = ({
                     </svg>
                   </span> */}
                   <Avatar
-                    profilePic={`https://${userAvatar}`}
+                    profilePic={validateHttp(userAvatar)}
                     name={"placeholder"}
                     height="h-12"
                     width="w-12"
@@ -371,7 +372,7 @@ const Form = ({
                                   </div>
                                   <p className="px-2">{`${name}-${linkSize}`}</p>
                                 </div>
-                                <p className="flex-auto">https://{url}</p>
+                                <p className="flex-auto">{url}</p>
                                 <button
                                   type="button"
                                   className="inline-flex items-center rounded-md border border-transparent bg-slate-600 p-1 text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"

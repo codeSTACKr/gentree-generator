@@ -8,6 +8,7 @@ import {
   IconClick,
 } from "@tabler/icons";
 import { socials } from "../helpers/socials";
+import { validateHttp } from "../helpers/helpers";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -48,13 +49,13 @@ const LinkForm = ({ linkList, setLinkList }) => {
           {
             id: `${linkType.name}-Small`,
             ...linkType,
-            url,
+            url: validateHttp(url),
             linkSize: "Small",
           },
           {
             id: `${linkType.name}-Large`,
             ...linkType,
-            url,
+            url: validateHttp(url),
             linkSize: "Large",
           },
         ]);
@@ -64,7 +65,7 @@ const LinkForm = ({ linkList, setLinkList }) => {
           {
             id: `${linkType.name}-${linkSize}`,
             ...linkType,
-            url,
+            url: validateHttp(url),
             linkSize,
           },
         ]);

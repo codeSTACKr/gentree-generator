@@ -124,4 +124,11 @@ function deEnvify(str) {
     .join(" ");
 }
 
-export { getVariables };
+function validateHttp(string) {
+  if (!/(http(s?)):\/\//i.test(string)) {
+    return `https://${string}`;
+  }
+  return string;
+}
+
+export { getVariables, validateHttp };

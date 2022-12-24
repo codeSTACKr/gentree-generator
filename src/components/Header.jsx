@@ -118,7 +118,7 @@ const Header = () => {
               href="https://www.producthunt.com/posts/gentr-ee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gentr&#0045;ee"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline dark:hidden"
+              className="hidden dark:hidden sm:inline"
             >
               <img
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372344&theme=light"
@@ -130,7 +130,7 @@ const Header = () => {
               href="https://www.producthunt.com/posts/gentr-ee?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gentr&#0045;ee"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-md border border-orange-600 dark:inline "
+              className="hidden rounded-md border border-orange-600 sm:dark:inline "
             >
               <img
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=372344&theme=dark"
